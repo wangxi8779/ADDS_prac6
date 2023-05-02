@@ -1,11 +1,11 @@
 #include "LinkedList.h"
-
+#include <limits>
 #include <iostream>
 using namespace std;
 
 LinkedList::LinkedList() { head = nullptr; }
 
-Node* LinkedList::traverse(unsigned int pos) {
+Node* LinkedList::traverse(int pos) {
   if (head == nullptr) {
     return head;
   }
@@ -21,7 +21,7 @@ Node* LinkedList::traverse(unsigned int pos) {
 
 LinkedList::LinkedList(int* array, int len) {
   head = nullptr;
-  for (unsigned int i = 0; i < len; i++) {
+  for (int i = 0; i < len; i++) {
     insertPosition(i + 1, array[i]);
   }
 };

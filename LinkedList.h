@@ -14,7 +14,7 @@ public:
   void printList();
 private: 
   Node* head;
-  Node* traverse(unsigned int index);
+  Node* traverse(int index);
 };
 
 #endif
