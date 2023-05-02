@@ -14,20 +14,20 @@ list<int> BigNumCalc::buildBigNum(string numString){
   return num;
 }
 list<int> BigNumCalc::add(list<int> num1, list<int> num2){
-  int num = toInt(num1) + toInt(num2);
+  unsigned long long int num = toInt(num1) + toInt(num2);
   return buildBigNum(to_string(num));
 }
 list<int> BigNumCalc::sub(list<int> num1, list<int> num2){
-  int num = toInt(num1) - toInt(num2);
+  unsigned long long int num = toInt(num1) - toInt(num2);
   return buildBigNum(to_string(num));
 }
 list<int> BigNumCalc::mul(list<int> num1, list<int> num2){
-  int num = toInt(num1) * toInt(num2);
+  unsigned long long int num = toInt(num1) * toInt(num2);
   return buildBigNum(to_string(num));
 }
 
-int BigNumCalc::toInt(list<int> numList) {
-  int result = 0;
+unsigned long long int BigNumCalc::toInt(list<int> numList) {
+  unsigned long long int result = 0;
   int digits = numList.size();
   for (int i : numList) {
     result += pow (10, (digits-1)) * i;
